@@ -9,6 +9,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { AddEditPageComponent } from './components/add-edit-page/add-edit-page.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 const routes: Routes = [
 
@@ -27,7 +28,8 @@ const routes: Routes = [
     LandingPageComponent,
     SearchPageComponent,
     ProfilePageComponent,
-    AddEditPageComponent
+    AddEditPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
