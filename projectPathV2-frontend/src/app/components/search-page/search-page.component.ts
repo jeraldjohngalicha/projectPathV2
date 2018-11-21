@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { SearchPageService } from '../../service/search-page/search-page.service';
+import { ProfileModel } from '../../models/ProfileModel';
 
 @Component({
   selector: 'app-search-page',
@@ -11,19 +12,20 @@ export class SearchPageComponent implements OnInit {
 
   private profileName: string;
   private aboutMe: string;
+  private profileModelList: Array<ProfileModel>;
 
-  constructor(private searchPageService: SearchPageService) { }
+  constructor(private searchPageService: SearchPageService) {
+    this.profileModelList = [];
+   }
 
   ngOnInit() {
   }
 
-  fetchDataTest(): void {
+  getAllProfiles(): void {
 
     this.searchPageService.getAllProfiles().subscribe(
       res => {
-        console.log('inside component ');
-        console.log(res);
-        
+        this.profileModelList = <Array<ProfileModel>>res;
       }
     );
 
