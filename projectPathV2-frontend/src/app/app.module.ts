@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,6 +11,8 @@ import { SearchPageComponent } from './components/search-page/search-page.compon
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { AddEditPageComponent } from './components/add-edit-page/add-edit-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+
+import { SearchPageService } from './service/search-page/search-page.service';
 
 const routes: Routes = [
 
@@ -34,9 +37,11 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [SearchPageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
