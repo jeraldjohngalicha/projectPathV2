@@ -1,5 +1,11 @@
-<p>
-  <button (click)="fetchDataTest()" >Fetch data!</button>
-  <input type="text" [(ngModel)]="profileName" >
-  <input type="text" [(ngModel)]="aboutMe" >
-</p>
+<button (click)="getAllProfiles()" >Fetch data!</button>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>About me</th>
+  </tr>
+  <tr *ngFor="let profiles of profileModelList" >
+    <td> {{ profiles.profileName }}</td>
+    <td> {{ profiles.aboutMe }}</td>
+  </tr>
+</table>
