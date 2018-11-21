@@ -1,9 +1,12 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 
 import profileRoutes from './routes/profileRoutes';
 
 const app = express();
+
+app.use(cors());
 app.use('/profileRoutes', profileRoutes);
 
 mongoose.connect('mongodb://localhost:27017/ppv2_master');
