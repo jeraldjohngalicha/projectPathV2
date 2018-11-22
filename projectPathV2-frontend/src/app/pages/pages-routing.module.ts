@@ -9,7 +9,7 @@ import { AddEditPostComponent } from './add-edit-post/add-edit-post.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
 import { NewestComponent } from './newest/newest.component';
 import { TrendingComponent } from './trending/trending.component';
-
+import{ ViewProfileComponent } from './view-profile/view-profile.component';
 
 const routes: Routes = [{
   path: '',
@@ -33,6 +33,10 @@ const routes: Routes = [{
   {
     path: 'newest',
     component: NewestComponent,
+  },
+  {
+    path: 'view-profile',
+    component: ViewProfileComponent,
   },
    {
     path: '',

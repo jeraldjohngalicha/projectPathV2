@@ -16,6 +16,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/add-edit-post'
   },
   {
+    title: 'View Profile',
+    link: '/pages/view-profile',
+  },
+  {
     title: 'Not Found',
     //icon: 'nb-home',
     link: '/pages/not-found',
