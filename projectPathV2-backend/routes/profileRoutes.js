@@ -4,7 +4,7 @@ import profileModel from '../models/profileModel';
 
 const profileRouter = express.Router();
 
-profileRouter.route('/').get((req, res) => {
+profileRouter.route('/getAllProfiles').get((req, res) => {
 
     profileModel.find({}, (err, profiles) => {
         res.json(profiles);
@@ -12,7 +12,7 @@ profileRouter.route('/').get((req, res) => {
 
 });
 
-profileRouter.route('/:profileId').get((req, res) => {
+profileRouter.route('/getProfile/:profileId').get((req, res) => {
 
     profileModel.findById(req.params.profileId, (err, profile) => {
         res.json(profile);

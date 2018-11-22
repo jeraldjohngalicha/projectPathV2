@@ -12,6 +12,6 @@ const profileModel = new Schema({
         type: String
     }
 
-})
+}, { collection:'profileModel' });
 
-export default mongoose.model('profile', profileModel);
+export default mongoose.model('profileModel', profileModel);
