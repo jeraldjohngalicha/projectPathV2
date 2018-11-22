@@ -1,42 +1,22 @@
+import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { RouterModule, Routes } from '@angular/router';
-
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { SearchPageComponent } from './components/search-page/search-page.component';
-import { ProfilePageComponent } from './components/profile-page/profile-page.component';
-import { AddEditPageComponent } from './components/add-edit-page/add-edit-page.component';
-import { LoginPageComponent } from './components/login-page/login-page.component';
-
-const routes: Routes = [
-
-  {path: 'landing', component: LandingPageComponent},
-  {path: 'search', component: SearchPageComponent},
-  {path: 'profile', component: ProfilePageComponent},
-  {path: 'modify', component: AddEditPageComponent},
-  {path: '', redirectTo: 'landing', pathMatch: 'full'}
-
-
-]
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LandingPageComponent,
-    SearchPageComponent,
-    ProfilePageComponent,
-    AddEditPageComponent,
-    LoginPageComponent
+    AppComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    BrowserAnimationsModule, 
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+    providers: [
+  ],
 })
 export class AppModule { }
