@@ -9,6 +9,7 @@ import { AddEditPostComponent } from './add-edit-post/add-edit-post.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
 import { NewestComponent } from './newest/newest.component';
 import { TrendingComponent } from './trending/trending.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [{
@@ -34,9 +35,13 @@ const routes: Routes = [{
     path: 'newest',
     component: NewestComponent,
   },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
    {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full',
   }]
 }];

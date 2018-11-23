@@ -3,22 +3,23 @@ import { NbMenuItem } from '@nebular/theme';
 export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Home',
-    //icon: 'nb-home',
+    icon: 'nb-home',
     link: '/pages/home',
   },
   {
+    title: 'Latest',
+    icon: 'fa fa-newspaper',
+    link: '/pages/not-found',
+  },
+  {
     title: 'Trending',
-    //icon: 'nb-home',
+    icon: 'ion-md-trending-up',
     link: '/pages/trending',
   },
   {
-    title: 'Add/Edit',
+    title: 'Top Rated',
+    icon: 'nb-edit',
     link: '/pages/add-edit-post'
   },
-  {
-    title: 'Not Found',
-    //icon: 'nb-home',
-    link: '/pages/not-found',
-  }
 
 ];

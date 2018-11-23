@@ -6,17 +6,20 @@ import { PagesComponent } from './pages.component';
 import { HomeComponent } from './home/home.component';
 import { NbThemeModule, NbLayoutModule, 
           NbSidebarModule, NbSidebarService, NbMenuModule, 
-          NbCardModule, NbButtonModule, NbStepperModule } from '@nebular/theme';
+          NbCardModule, NbButtonModule, NbStepperModule, NbCheckboxModule,
+          NbActionsModule, NbSearchModule } from '@nebular/theme';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddEditPostComponent } from './add-edit-post/add-edit-post.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
 import { NewestComponent } from './newest/newest.component';
 import { TrendingComponent } from './trending/trending.component';
+import { LoginComponent } from './login/login.component';
+import { LayoutService } from './layout.service';
 
 
 const PAGES_COMPONENTS = [
   PagesComponent, HomeComponent, AddEditPostComponent,
-  TopRatedComponent, NewestComponent, TrendingComponent
+  TopRatedComponent, NewestComponent, TrendingComponent, LoginComponent
   
 ];
 
@@ -32,14 +35,17 @@ const PAGES_COMPONENTS = [
     NbStepperModule ,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule, 
+    NbCheckboxModule,
+    NbActionsModule,
+    NbSearchModule
   ],
 
   declarations: [
     ...PAGES_COMPONENTS,
   ],
 
-  providers:[NbSidebarService],
+  providers:[NbSidebarService, LayoutService], 
 })
 
 export class PagesModule {
