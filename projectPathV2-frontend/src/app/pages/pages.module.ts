@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NbThemeModule, NbLayoutModule, 
           NbSidebarModule, NbSidebarService, NbMenuModule, 
           NbCardModule, NbButtonModule, NbStepperModule, NbCheckboxModule,
-          NbActionsModule, NbSearchModule, NbUserModule } from '@nebular/theme';
+          NbActionsModule, NbSearchModule, NbUserModule, NbInputModule } from '@nebular/theme';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddEditPostComponent } from './add-edit-post/add-edit-post.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
@@ -40,7 +40,8 @@ const PAGES_COMPONENTS = [
     NbCheckboxModule,
     NbActionsModule,
     NbSearchModule,
-    NbUserModule
+    NbUserModule,
+    NbInputModule
   ],
 
   declarations: [

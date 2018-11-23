@@ -24,12 +24,14 @@ import { LayoutService } from './layout.service';
           [class.left]="position === 'normal'"
           [class.right]="position === 'inverse'">
           <nb-action >
-          <nb-user [name]="'Andrew Berania'"></nb-user>
+          <nb-user [name]="'Andrew Berania'" [picture]="['/pages/profile.jpg']"></nb-user>
           </nb-action>
           <nb-action class="control-item" disabled icon="nb-notifications"></nb-action>
-          <nb-action class="control-item" icon="nb-email"></nb-action>
           <nb-action class="control-item">
             <nb-search type="rotate-layout"></nb-search>
+          </nb-action>
+          <nb-action class="control-item" title="Add new post" >
+            <a [routerLink]="['/pages/add-edit-post']"><i class="nb-plus plus-customized" ></i></a>
           </nb-action>
         </nb-actions>
         </div>        
