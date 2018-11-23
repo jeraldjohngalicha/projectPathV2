@@ -1,0 +1,47 @@
+
+<div class="col-md-12 col-lg-2 col-xxxl-2"></div>
+<div class="col-md-12 col-lg-6 col-xxxl-6">
+    <nb-card size="medium">
+      <nb-card-body>
+
+          <h1 id="title" class="title">Login</h1>
+          <p class="sub-title">Hello! Log in with your email.</p>
+          
+          <form aria-labelledby="title">
+          
+            <div class="form-control-group">
+              <label class="label" for="input-email">Email address:</label>
+              <input nbInput
+                     fullWidth
+                     placeholder="Email address"
+                     autofocus>
+            </div>
+          
+            <div class="form-control-group">
+              <label class="label" for="input-password">Password:</label>
+              <input nbInput
+                     fullWidth
+                     placeholder="Password">
+            </div>
+          
+            <div class="form-control-group accept-group">
+              <nb-checkbox name="rememberMe">Remember me</nb-checkbox>
+              <a class="forgot-password">Forgot Password?</a>
+            </div>
+          
+            <button nbButton
+                    fullWidth>
+              <a [routerLink]="['/pages/home']">Login</a>
+            </button>
+          </form>
+
+      </nb-card-body>
+      </nb-card>
+      </div>
+<div class="col-md-12 col-lg-2 col-xxxl-2"></div>
+
+
+
+<section class="another-action" aria-label="Register">
+  Don't have an account? <a class="text-link">Register</a>
+</section>
