@@ -10,7 +10,8 @@ import { TopRatedComponent } from './top-rated/top-rated.component';
 import { NewestComponent } from './newest/newest.component';
 import { TrendingComponent } from './trending/trending.component';
 import { LoginComponent } from './login/login.component';
-import{ ViewProfileComponent } from './view-profile/view-profile.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 const routes: Routes = [{
   path: '',
@@ -42,6 +43,10 @@ const routes: Routes = [{
   {
     path: 'view-profile',
     component: ViewProfileComponent,
+  },
+  {
+    path: 'search-result',
+    component: SearchResultComponent,
   },
    {
     path: '',

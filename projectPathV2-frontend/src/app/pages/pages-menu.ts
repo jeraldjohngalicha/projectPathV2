@@ -24,6 +24,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'View Profile',
     link: '/pages/view-profile',
+  },
+  {
+    title: 'Search Result',
+    icon: 'fa fa-search-location',
+    link: '/pages/search-result',
   }
 
 ];

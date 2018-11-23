@@ -16,6 +16,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   i.fa {
       font-size: 2rem !important;
+      color:#a4abb3 !important;
+
   }
 
   i.icon-style {
@@ -26,4 +28,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: x-large;
     font-weight: bolder;
     color:#a4abb3 !important;
+  }
+
+  .list-card {
+    nb-card-header {
+      border-bottom: none;
+    }
+
+    nb-card-body {
+      padding: 0;
+    }
+  }
+
+  .list-item-active {
+    background-color: #40dc7e;
+  }
+
+  div.panel-color {
+    background-color: white !important;
   }
