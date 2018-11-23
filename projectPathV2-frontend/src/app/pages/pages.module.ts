@@ -5,19 +5,22 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { HomeComponent } from './home/home.component';
 import { NbThemeModule, NbLayoutModule, 
-          NbSidebarModule, NbSidebarService, NbMenuModule, 
-          NbCardModule, NbButtonModule, NbStepperModule, NbInputModule } from '@nebular/theme';
+          NbSidebarModule, NbSidebarService, NbMenuModule,
+          NbCardModule, NbButtonModule, NbStepperModule, NbCheckboxModule,
+          NbActionsModule, NbSearchModule, NbUserModule, NbInputModule } from '@nebular/theme';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddEditPostComponent } from './add-edit-post/add-edit-post.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
 import { NewestComponent } from './newest/newest.component';
 import { TrendingComponent } from './trending/trending.component';
+import { LoginComponent } from './login/login.component';
+import { LayoutService } from './layout.service';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 
 const PAGES_COMPONENTS = [
   PagesComponent, HomeComponent, AddEditPostComponent,
-  TopRatedComponent, NewestComponent, TrendingComponent,
+  TopRatedComponent, NewestComponent, TrendingComponent, LoginComponent,
   ViewProfileComponent
 ];
 
@@ -34,6 +37,10 @@ const PAGES_COMPONENTS = [
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
+    NbCheckboxModule,
+    NbActionsModule,
+    NbSearchModule,
+    NbUserModule,
     NbInputModule
   ],
 
@@ -41,7 +48,7 @@ const PAGES_COMPONENTS = [
     ...PAGES_COMPONENTS,
   ],
 
-  providers:[NbSidebarService],
+  providers:[NbSidebarService, LayoutService], 
 })
 
 export class PagesModule {
