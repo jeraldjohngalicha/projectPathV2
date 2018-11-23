@@ -9,17 +9,17 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Latest',
     icon: 'fa fa-newspaper',
-    link: '/pages/not-found',
+    link: '/pages/newest',
   },
   {
     title: 'Trending',
-    icon: 'ion-md-trending-up',
+    icon: 'ion-md-trending-up icon-style',
     link: '/pages/trending',
   },
   {
     title: 'Top Rated',
-    icon: 'nb-edit',
-    link: '/pages/add-edit-post'
+    icon: 'nb-star',
+    link: '/pages/top-rated'
   },
 
 ];

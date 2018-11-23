@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { MENU_ITEMS } from './pages-menu';
 import { NbMenuService, NbSidebarService } from '@nebular/theme';
@@ -23,6 +23,9 @@ import { LayoutService } from './layout.service';
           size="medium"
           [class.left]="position === 'normal'"
           [class.right]="position === 'inverse'">
+          <nb-action >
+          <nb-user [name]="'Andrew Berania'"></nb-user>
+          </nb-action>
           <nb-action class="control-item" disabled icon="nb-notifications"></nb-action>
           <nb-action class="control-item" icon="nb-email"></nb-action>
           <nb-action class="control-item">
