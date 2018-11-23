@@ -3,16 +3,61 @@
     <nb-stepper orientation="horizontal">
       <nb-step [label]="labelOne">
         <ng-template #labelOne>First step</ng-template>
-        <h3>Step content #1</h3>
+        <h3>Post Details</h3>
+        <input type="radio" name="Privacy" value="Public">Public
+        <input type="radio" name="Privacy" value="Private">Private<br/>
+        <input type="text" [ngModel]="postTitle" class="form-control" size="25" maxlength="100" placeholder="Enter your Post Title"/><br/>
+        <textarea id="Sample2" placeholder="Enter Post Description"></textarea><br/>
+        <input type="text" class="form-control" size="25" maxlength="100" placeholder="Enter Post Tags"/><br/>
+        <button nbButton (click)="uploadThumbnail()" value="Thumbnail">Add Thumbnail</button><br/>
         <button nbButton disabled nbStepperNext>prev</button>
         <button nbButton nbStepperNext>next</button>
       </nb-step>
+
+
+
+
+
       <nb-step [label]="labelTwo">
         <ng-template #labelTwo>Second step</ng-template>
         <h3>Step content #2</h3>
+        <nb-stepper orientation="horizontal">
+            <nb-step [label]="labelzOne">
+              <ng-template #labelzOne>Point 1</ng-template>
+            </nb-step>
+            <nb-step [label]="labelzOne" *ngFor="let point of addedPoints">
+                <ng-template #labelzOne>{{pointTitle}}</ng-template>
+            </nb-step>
+        </nb-stepper>
+        <nb-card>
+          <nb-card-body>
+            <input type="text" nbInput fullWidth shape="round" placeholder="Round">
+            <input type="text" nbInput status="info" shape="semi-round" [ngModel]="pointTitle" size="25" maxlength="100" placeholder="Point Title"/>
+            <button nbButton shape="round" status="info" value="Icon">Icon</button><br/>
+            <input nbInput status="info" shape="semi-round" type="text" id="Sample6" placeholder="Expense/Fair">
+            <input type="radio" name="FairStatus" value="Exact">Exact
+            <input type="radio" name="FairStatus" value="Approximate">Approximate<br/><br/>
+            <textarea nbInput fullWidth shape="round" placeholder="Point Description"></textarea><br/>
+          </nb-card-body>
+        </nb-card>
+
+
+        <button nbButton (click)="uploadPointPhoto()" value="Upload Photo">Upload Image</button>
+        <button nbButton (click)="addPoint()" value="Upload Photo">+</button><br/><br/>
         <button nbButton nbStepperPrevious>prev</button>
         <button nbButton nbStepperNext>next</button>
       </nb-step>
+
+
+
+
+
+
+
+
+
+
+
       <nb-step label="Third step">
         <h3>Step content #3</h3>
         <button nbButton nbStepperPrevious>prev</button>
