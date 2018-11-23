@@ -15,12 +15,13 @@ import { NewestComponent } from './newest/newest.component';
 import { TrendingComponent } from './trending/trending.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutService } from './layout.service';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 
 const PAGES_COMPONENTS = [
   PagesComponent, HomeComponent, AddEditPostComponent,
-  TopRatedComponent, NewestComponent, TrendingComponent, LoginComponent
-  
+  TopRatedComponent, NewestComponent, TrendingComponent, LoginComponent,
+  ViewProfileComponent
 ];
 
 @NgModule({

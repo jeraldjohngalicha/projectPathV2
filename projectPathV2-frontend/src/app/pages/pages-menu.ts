@@ -21,5 +21,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-star',
     link: '/pages/top-rated'
   },
+  {
+    title: 'View Profile',
+    link: '/pages/view-profile',
+  }
 
 ];
