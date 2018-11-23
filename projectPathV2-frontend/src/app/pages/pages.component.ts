@@ -31,6 +31,9 @@ import { LayoutService } from './layout.service';
           <nb-action class="control-item">
             <nb-search type="rotate-layout"></nb-search>
           </nb-action>
+          <nb-action class="control-item" title="Add new post" >
+          <a [routerLink]="['/pages/add-edit-post']"><i class="nb-plus plus-customized" ></i></a>
+        </nb-action>
         </nb-actions>
         </div>        
         </nb-layout-header>
