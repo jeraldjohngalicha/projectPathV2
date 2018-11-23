@@ -11,6 +11,9 @@ export class AddEditPostComponent implements OnInit {
   firstForm: FormGroup;
   secondForm: FormGroup;
   thirdForm: FormGroup;
+  addedPoints : Point[] = [];
+  postTitle : String = "";
+  pointTitle : String = "";
 
   constructor(private fb: FormBuilder) {
   }
@@ -40,4 +43,22 @@ export class AddEditPostComponent implements OnInit {
   onThirdSubmit() {
     this.thirdForm.markAsDirty();
   }
+
+  uploadThumbnail(){
+    alert("Thumbnail Uploaded");
+  }
+
+  uploadPointPhoto(){
+    alert("Point Photo Uploaded");
+  }
+
+  addPoint(){
+    alert("Add New Point "+this.pointTitle);
+    this.addedPoints.push(new Point());
+
+  }
+}
+
+class Point{
+    title: string = "";
 }
