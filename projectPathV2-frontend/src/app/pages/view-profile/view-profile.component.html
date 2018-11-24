@@ -1,1 +1,60 @@
-View Profile
+<div>
+    <div>
+        <div>
+            <nb-card>
+                <nb-card-header><nb-user name="{{profileModel.profileName}}"></nb-user></nb-card-header>
+                <nb-card-body>
+                        <div>
+                            <p>Member since {{profileModel.joinedDate}}</p>
+                        </div>
+                        <div>
+                            <p>{{profileModel.profileActivity.followers}} FOLLOWERS </p>
+                        </div>
+                        <div>
+                            <p>{{profileModel.profileActivity.reputation}} REPUTATION</p>
+                        </div>
+                        <div>
+                            <p>{{profileModel.profileActivity.posts}} POSTS</p>
+                        </div> 
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</div>
+<div>
+    <nb-card>
+        <nb-card-header>About</nb-card-header>
+        <nb-card-body>
+            <b>Description</b>
+            <br/>
+            {{profileModel.description}}
+        </nb-card-body>
+    </nb-card>
+</div>
+<div>
+    <nb-card>
+        <nb-card-header>Recent Uploads</nb-card-header>
+        <nb-card-body>
+            // images here
+        </nb-card-body>
+    </nb-card>
+</div>
+<div>
+    <nb-card>
+        <nb-card-header>Collections</nb-card-header>
+        <nb-card-body>
+            // images here
+        </nb-card-body>
+    </nb-card>
+</div>
+<div>
+    <nb-card>
+        <nb-card-header>Popular</nb-card-header>
+        <nb-card-body>
+            // images here
+        </nb-card-body>
+    </nb-card>
+</div>

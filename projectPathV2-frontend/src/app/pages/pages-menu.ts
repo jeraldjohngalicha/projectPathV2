@@ -23,6 +23,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   },
   {
     title: 'View Profile',
+    icon: 'fas fa-user',
     link: '/pages/view-profile',
   },
   {
